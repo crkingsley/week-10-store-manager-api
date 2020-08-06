@@ -4,8 +4,10 @@ const {ObjectID} = require('mongodb');
 
 // a "collection" in mongo is a lot like a list which is a lot like an Array
 const collectionName = 'logos';
+// this is what your mongo server is saving your data to
 
 async function createLogo(logo) {
+  // this is where you could add logic, don't add duplicate logos
   const database = await getDatabase();
   // for `insertOne` info, see https://docs.mongodb.com/manual/reference/method/js-collection/
   const {insertedId} = await database.collection(collectionName).insertOne(logo);
