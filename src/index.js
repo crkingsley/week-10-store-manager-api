@@ -16,6 +16,7 @@ app.get('/', async (req, res) => {
 
 app.use('/products', require('./routes/productsRoutes'))
 app.use('/logos', require('./routes/logosRoutes'))
+app.use('/stores', require('./routes/storesRoutes'))
 
 // connect to our database
 // https://www.mongodb.com/

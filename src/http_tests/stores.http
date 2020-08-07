@@ -4,5 +4,25 @@
 GET http://localhost:3001/stores
 
 ### Test creating a store
+POST http://localhost:3001/stores
+Content-Type: application/json
 
+{
+  "storeName": "Golf Balls Are Us!",
+  "slogan": "Get your balls here!"
+}
 ### Test the PUT which should change a store
+
+PUT http://localhost:3001/stores/5f2caf7675484233a07a8584
+Content-Type: application/json
+
+{
+    "state": "Maine"
+}
+
+### Test the DELETE which should remove a store
+
+
+DELETE http://localhost:3001/stores/5f2caf7675484233a07a8584
+Content-Type: application/json
+
