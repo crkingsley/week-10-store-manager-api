@@ -1,7 +1,8 @@
 const {getDatabase} = require('./mongo-common');
 // https://docs.mongodb.com/manual/reference/method/ObjectId/
 const {ObjectID} = require('mongodb');
-
+/// to reference username "addedBy"
+const getUserName = require('git-user-name');
 // a "collection" in mongo is a lot like a list which is a lot like an Array
 const collectionName = 'logos';
 // this is what your mongo server is saving your data to

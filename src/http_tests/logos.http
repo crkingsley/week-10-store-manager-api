@@ -14,9 +14,15 @@ Content-Type: application/json
 }
 
 ### Test the PUT which should change a logo
-PUT http://localhost:3001/logos/
+PUT http://localhost:3001/logos/5f2c94074e20d8482f022cdb
 Content-Type: application/json
 
 {
   "name": "Super Logo"
 }
+
+### Test the DELETE which should remove a logo
+
+DELETE http://localhost:3001/logos/5f2c9375b92cb21d90a8e78d
+Content-Type: application/json
+
