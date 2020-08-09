@@ -5,4 +5,22 @@ GET http://localhost:3001/variations
 
 ### Test creating a variation
 
+POST http://localhost:3001/variations
+Content-Type: application/json
+
+{
+    "variation": "checkered"
+}
+
 ### Test the PUT which should change a variation
+
+PUT http://localhost:3001/variations/5f307721d01b7235709f5299
+Content-Type: application/json
+
+{
+    "variation": "plaid"
+}
+
+### Test the DELETE which should remove a variation
+
+DELETE http://localhost:3001/variations/5f307721d01b7235709f5299
