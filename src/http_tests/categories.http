@@ -1,8 +1,26 @@
 ### Test the stores
 ### stores are the customers such as each golf course
 
-GET http://localhost:3001/stores
+GET http://localhost:3001/categories
 
-### Test creating a store
+### Test creating a Category
+POST http://localhost:3001/categories
+Content-Type: application/json
 
-### Test the PUT which should change a store
+{
+    "category": "Children's Apparel"
+}
+
+### Test the PUT which should change a category
+
+PUT http://localhost:3001/categories/5f2f4cb2a8e39b3b6cc3e54d
+Content-Type: application/json
+
+{
+    "category 10": "Golf Shoes"
+}
+
+### Test the DELETE which should remove a category
+
+DELETE http://localhost:3001/categories/5f3072d770f8d31c4453a078
+Content-Type: application/json
